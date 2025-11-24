@@ -1,0 +1,181 @@
+/* esto para resetear los estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background: #6386a8;
+    background-image: url("img/imagen\ princ.jpg");
+    color: #13345c;
+    
+    
+}
+
+
+/* Esta es la seccion principal la que va arriba  */
+.hero{
+    background: url("https://i.imgur.com/evjDabU.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 180px 20px 80px;
+    color: white;
+    position: relative;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero h1{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-hero{
+    background: #aabdcf;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-hero:hover{
+    background: #14456f;
+}
+
+/* aqui va la barrade navegacion o menu  */
+.nav-bar{
+    background: rgba(10, 35, 66, 0.8);
+    padding: 15px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.nav-bar ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-bar .activo{
+    border-bottom: 2px solid white;
+}
+
+.nav-bar a:hover{
+    opacity: 0.7;
+}
+
+/* contenido */
+.main-container{
+    padding: 40px 20px;
+}
+
+.titulo-seccion{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #fafafce3;
+}
+
+/* aqui   */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.808);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(86, 26, 155, 0.822);
+    transition: all 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(66, 11, 216, 0.815);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3{
+    margin: 12px 0 8px;
+    color: #0915c4;
+}
+
+.card .descripcion{
+    font-size: 14px;
+    color: #37333a;
+    margin-bottom: 10px;
+}
+
+.card button{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #0ba78d;
+    color: rgb(26, 23, 23);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.card button:hover{
+    background: #8a0cd3;
+}
+
+/* footer  */
+footer{
+    background: #4054ad;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* lo responsivo*/
+@media (max-width: 700px){
+    .nav-bar ul{
+        flex-direction: column;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+    
+}
